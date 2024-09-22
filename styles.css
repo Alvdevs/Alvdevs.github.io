@@ -1,0 +1,220 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #1c1c1c; /* Fondo oscuro más neutro */
+    color: #e0e0e0; /* Texto en gris claro */
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Encabezado */
+  .header {
+    background-color: #1c1c1c; /* Fondo oscuro */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #676767; /* Línea sutil en el borde */
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Texto en gris claro */
+  }
+  
+  .header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .header nav ul li a {
+    color: #9457eb; /* Color de acento para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .header nav ul li a:hover {
+    color: #d1c4e9; /* Efecto hover más suave */
+  }
+  
+  /* Efectos suaves */
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hero */
+  .hero {
+    margin-top: 100px;
+    padding: 50px 0;
+  }
+  
+/* Efecto en la imagen de perfil */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #9457eb; /* Acento morado */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
+    opacity: 0.9; /* Reduce la opacidad */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra difusa */
+  }
+  
+  .intro-text {
+    font-size: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  /* Acerca de mí */
+  .about {
+    padding: 50px;
+    background-color: #1f1f1f; /* Fondo gris oscuro */
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    color: #9457eb; /* Acento morado */
+  }
+  
+  .about p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: #d3d3d3; /* Texto en gris más claro */
+  }
+  
+  /* Habilidades Técnicas */
+  .skills {
+    padding: 50px;
+    background-color: #1c1c1c; /* Fondo oscuro */
+  }
+  
+  .skills h2 {
+    font-size: 28px;
+    color: #9457eb; /* Acento morado */
+    margin-bottom: 40px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .skills-grid div {
+    background-color: #2a2a2a; /* Cartas en gris oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-grid div:hover {
+    transform: scale(1.05); /* Efecto hover sutil */
+  }
+  
+  /* Proyectos */
+  .projects {
+    padding: 50px;
+    background-color: #1f1f1f; /* Fondo gris oscuro */
+  }
+  
+  .projects h2 {
+    font-size: 28px;
+    color: #9457eb; /* Acento morado */
+    margin-bottom: 40px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #2a2a2a; /* Cartas de proyectos en gris oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Efecto hover */
+  }
+  
+  /* Contacto */
+  .contact {
+    padding: 50px;
+    background-color: #1c1c1c; /* Fondo oscuro */
+  }
+  
+  .contact h2 {
+    font-size: 28px;
+    color: #9457eb; /* Acento morado */
+  }
+  
+  .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1f1f1f; /* Fondo gris oscuro */
+    padding: 20px;
+    color: #d3d3d3; /* Texto en gris claro */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Animaciones de scroll */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

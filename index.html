@@ -1,30 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Proyectos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - [Tu Nombre]</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>¡Bienvenido a mi Portafolio!</h1>
-            <p>Explora algunos de mis proyectos de programación</p>
-        </div>
-    </header>
+  <!-- Encabezado -->
+  <header class="header">
+    <h1>AlC dev </h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Acerca de mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="projects">
-        <div class="container">
-            <h2>Mis Proyectos</h2>
-            <!-- Aquí puedes agregar tus proyectos como tarjetas o listas -->
-        </div>
-    </section>
+  <!-- Sección Principal -->
+  <section class="hero">
+    <img src="Imgs/mifoto.jpeg" alt="Alvaro leon " class="profile-pic">
+    <p class="intro-text">¡Hola! Soy Alvaro Leon , desarrollador backend con experiencia en APIs REST, SQL Server, ASP.NET Core, y más.</p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Mi Nombre</p>
-        </div>
-    </footer>
+  <!-- Acerca de mí -->
+  <section id="about" class="about">
+    <h2>Acerca de mí</h2>
+    <p>
+      Soy un desarrollador backend con experiencia en múltiples tecnologías. He trabajado en la creación de sistemas integrados 
+      con APIs REST, reportes conectados a ERP,Mantenimiento a servidores Windows y  Soporte It.  Mi pasión es resolver problemas complejos 
+      mediante  el uso de diferentes tecnologías y Herramientas, optimizando bases de datos y asegurando una infraestructura sólida.
+    </p>
+
+    <br>
+    <p>
+        Ademas cuento con experiencia en soporte Ti nivel 2 y 3, conocimiento en microsoft 365 y mi atencion al usuario y comunicacion  siempre es algo en lo que destaco
+    </p>
+  </section>
+
+  <!-- Habilidades Técnicas -->
+  <section id="skills" class="skills">
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills-grid">
+      <div>
+        <h3>Lenguajes de Programación</h3>
+        <p>C#, JavaScript, SQL</p>
+      </div>
+      <div>
+        <h3>Frameworks y Herramientas</h3>
+        <p>ASP.NET Core 8, Entity Framework, React.js,node.js</p>
+      </div>
+      <div>
+        <h3>DevOps & Bases de Datos</h3>
+        <p>SQL Server, Docker, pandas</p>
+      </div>
+    </div>
+    <h2>Habilidades Blandas</h2>
+    <div class="skills-grid">
+      <div>
+        <h3>Proactividad</h3>
+      
+      </div>
+      <div>
+        <h3>Comunicación</h3>
+
+
+      </div>
+      <div>
+        <h3>Perseverancia</h3>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="projects" class="projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>API REST para CONDUSEF</h3>
+        <p>Desarrollé y gestioné una interfaz conectada a la API de  los sistemas REDECO y REUNE usando C# y ASP.NET Core.</p>
+      </div>
+      <div class="project-card">
+        <h3>Sistema de Comedor con Huella</h3>
+        <p>Desarrollé un sistema con huella dactilar usando Entity Framework y .NET Core.</p>
+      </div>
+      <div class="project-card">
+        <h3>Reporteador de Nómina</h3>
+        <p>Conecté un sistema de reportes a  erp Intelisis usando React y .NET Core.</p>
+<br>
+        <p>Tambien puedo conectarme a sistemas de compact i  usando jdk</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto (Actualizado) -->
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>si te interezan mis habilidades no dudes en llamar </p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> al99camacho@gmail.com</p>
+      <p><strong>Teléfono:</strong> +52 4461595795</p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Alvaro Leon. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    document.addEventListener('scroll', function () {
+      const sections = document.querySelectorAll('section');
+      const windowHeight = window.innerHeight;
+  
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+  
+        if (sectionTop < windowHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
